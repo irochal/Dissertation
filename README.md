@@ -1,4 +1,23 @@
 # Dissertation
+## Road Accident Rate Prediction Using Statistical Models
+
+This project investigates statistical methods for predicting road accident rates in locations with both observed and limited data availability. The analysis uses 56 years of monthly accident rate data (1960–2016) across 51 traffic analysis zones in Florida to evaluate approaches that can generate reliable predictions with a limited number of explanatory variables.
+
+The objective was to identify models that provide accurate predictions while balancing model complexity and data availability. The approaches evaluated included:
+- Multiple linear regression with variable selection.
+- Hierarchical linear models.
+- Kriging methods for spatial prediction in locations without observed data.
+
+Model performance was assessed using cross-validation techniques, including 10-fold cross-validation for regression models and mean squared prediction error for spatial predictions.
+
+Key findings:
+- Multiple linear regression using all available explanatory variables and interaction effects achieved the lowest prediction error among the regression-based approaches.
+- Kriging methods provided accurate predictions for locations without observed data, demonstrating the potential of spatial modelling techniques for estimating risk in unsampled areas.
+- The project highlights the importance of model selection and validation when developing predictive models with limited information.
+
+The project demonstrates experience in statistical modelling, predictive analytics, cross-validation, and applying quantitative methods to real-world risk assessment problems.
+
+## How to run
 There 6 different R files that are required to run the whole project.Before running the files some specifc packages need to be loaded. These are: 
 -dplyr
 -tidyr
@@ -29,6 +48,7 @@ read.table("~/Documents/iro/uni/Dissertation/Data/florida_acc.txt", quote="\"", 
 
 replace: "~/Documents/iro/uni/Dissertation/Data/florida_acc.txt" with the right path. This needs to be done in all the files.  
 
+### Relevant R scripts
 The files are the followimg and each one of them relates to specific sections of the project:
 
 1) eda_and_linear_reg file: This file inlcudes all the initial data manipulation that took place in order to transform the data into the format needed to perform some intitial analysis as well as the linear regression. The first 200 lines relate to Section 3.1 in the report where the data manipulation and EDA takes place.
